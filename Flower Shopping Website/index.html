@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<title>Online Flower</title>
+	<style type="text/css">
+
+		body{
+			background-color: #FEFBF6;
+		}
+
+    /*Header Section*/
+    
+
+    #topnav{
+       width: 100%;
+       height: 60px;
+       background-color: #fff;
+       padding-top: 10px;
+       position: fixed;
+       z-index: 1;
+
+    }
+
+    #head-center{
+        padding-left: 22%;
+        font-size: 18px;
+
+
+
+    }
+
+    #topnav a{
+    	padding-left: 15px;
+    	text-decoration: none;
+    	color: #7F8487;
+
+
+    }
+
+    #h1{
+    	color: black;
+    	font-family: Roboto;
+    	font-size: 30px;
+    	padding-left: 90px;
+    }
+
+    #h2{
+       color: #E80F88;
+       height: -10px;
+       width: -20px;
+       font-size: 8px;
+    }
+
+    #h3{
+    	float: right;
+    	padding-right: 80px;
+    	padding-top: 10px;
+    }
+
+    /*Background Image Section*/
+
+    #back-img{
+    	display: flex;
+    	
+    	
+    }
+
+    #back-img img{
+    	width: 1519px;
+    	height: 660px;
+    	background-repeat: no-repeat;
+    	/*position: absolute;*/
+    }
+
+    #back-img h1{
+    	top: 10%;
+    }
+
+    #back-img-cont{
+    	position: absolute;
+    	top: 40%;
+    	left: 12%;
+
+    }
+
+    #back-img-h1{
+    	font-size: 50px;
+    	font-family: Roboto;
+    }
+
+    #back-img-h2{
+    	font-size: 25px;
+    	color: #E80F88;
+
+    }
+
+    #back-img p{
+    	color: #7F8487;
+    }
+
+    #back-img button{
+    	background-color: black;
+    	color: #fff;
+    	border-radius: 40px;
+    }
+    
+
+    /*About Us Section Css*/
+
+    #about{
+    	position: absolute;
+    	top: 100%;
+
+    }
+
+
+    #about-h1{
+    	color:#E80F88;
+      position: relative;
+
+
+    }
+
+    #about h1{
+      margin-left: 40%;
+      padding-top: 10px;
+    }
+
+    #about video{
+      width: 500px;
+      height: 500px;
+      position: relative;
+      z-index: 0;
+      left: 10%;
+
+      
+    }
+
+    .overlay {
+    position:absolute;
+    z-index:1;
+    top: 330px;
+    left: 300px;
+    color: #fff;
+   
+    }
+
+    #about-cont{
+      float: left;
+      margin-left: 680px;
+      margin-top: -380px;
+
+    }
+
+    #about button{
+      background-color: black;
+      color: #fff;
+      border-radius: 40px;
+    }
+
+    #about-box{
+      position: absolute;
+       width: 75%;
+       margin-left: 180px;
+      height: 65px;
+      background-color:#FFE3E1;
+     
+    }
+
+    #about-box h1{
+     float: left;
+    }
+
+    #about-lower{
+      background-color: #FFE3E1;
+      width: 1518px;
+      height: 150px;
+    }
+
+
+    
+    #about-symb div{
+      padding-top: 50px;
+      padding-left: 50px;
+    }
+
+
+    #container{
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+      margin-left: 80px;
+
+    
+
+
+    }
+
+    #container img{
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+    }
+
+
+
+    #a1{
+      background-color: white;
+      display: flex;
+      margin-left:15px;
+      width: 270px;
+      height: 70px;
+
+    }
+    #a2{
+      background-color: white;
+      display: flex;
+      margin-left:15px;
+      width: 270px;
+      height: 70px;
+    }
+    #a3{
+      background-color: white;
+      display: flex;
+      margin-left:15px;
+      width: 270px;
+      height: 70px;
+    }
+    #a4{
+      background-color: white;
+      display: flex;
+      margin-left:15px;
+      width: 270px;
+      height: 70px;
+    }
+
+    #heading{
+      padding-top: 10px;
+      font-family: Roboto;
+      font-size: 16px;
+    }
+    
+    
+    #msg{
+      margin-top: 40px;
+      font-size: 12px;
+      margin-left: -100px;
+
+    }
+
+
+    /*Latest Products Section Css*/
+    #products{
+
+      position: absolute;
+       width: 70%;
+       justify-content: center;
+       align-content: center;
+      height: 60px;
+      top: 210%;
+      background-color:#FFE3E1;
+      margin-left: 220px;
+      padding-left: 27%;
+      padding-top: 5px;
+    }
+
+    #pro-box{
+      display: flex;
+      margin-left: -400px;
+      margin-top: 30px;
+    }
+
+    #pro-a{
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+    }
+
+    #pro-b{
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 10px;
+    }
+
+    #pro-c{
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 10px;
+    }
+
+    #pro-d{
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 10px;
+    }
+    #pro-e{
+      width: 1030px;
+      height: 380px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: -400px;
+      margin-top: 40px;
+
+
+    }
+    #pro-e img{
+      width: 250px;
+      height: 220px;
+      margin-left: 35%;
+      margin-top: 70px;
+    }
+
+    /*For Product e Section*/
+    #pro-head1{
+      font-family: Roboto;
+      margin-left: 430px;
+      font-size: 20px;
+    
+    
+    }
+
+
+    #pro-cont1{
+      font-family: Roboto;
+      color: #E80F88 ;
+     margin-left: 440px;
+      font-size: 20px;
+      margin-top: -20px;
+    }
+
+    #pro-low1{
+      margin-left: 510px;
+      font-size: 15px;
+      margin-top: -40px;
+
+    }
+
+    #pro div{
+      padding-left: 10px;
+
+    }
+
+    #pro-box img{
+      width: 200px;
+      height: 200px;
+      margin-left: 20px;
+    }
+
+    #pro-head{
+      font-family: Roboto;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+
+    #pro-cont{
+      font-family: Roboto;
+      color: #E80F88 ;
+     margin-left: 80px;
+      font-size: 20px;
+      margin-top: -20px;
+    }
+
+    #pro-low{
+      margin-left: 150px;
+      font-size: 15px;
+      margin-top: -40px;
+
+    }
+
+
+    /*Customer's Review Section CSS*/
+
+    #cust-back{
+      position: absolute;
+      width: 1080px;
+      height: 60px;
+      background-color:#FFE3E1;
+      margin-left: -434px;
+      margin-top: 5%;
+      padding-left: 27%;
+      padding-top: 5px;
+    }
+
+    #cust-disp{
+      display: flex;
+      margin-top: 120px;
+      margin-left: -70%;
+
+
+    }
+
+    #cust-a{
+      width: 800px;
+      height: 250px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+
+    #cust-b{
+      width: 800px;
+      height: 250px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+
+    #cust-c{
+      width: 800px;
+      height: 250px;
+      background-color: white;
+      box-shadow: 10px 10px 8px #888888;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+
+    #cust-star{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    #cust-cont{
+      font-size: 13px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #73777B;
+
+    }
+
+    #cust-disp img{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      margin-left: 20px;
+    }
+
+    #cust-name{
+      margin-left: 80px;
+      margin-top: -40px;
+      font-family: Roboto;
+
+    }
+
+    #cust-desc{
+      font-size: 13px;
+      margin-left: 80px;
+      margin-top: -20px;
+      color: #73777B;
+    }
+
+
+    /*Contact Us Section*/
+    #contact{
+      position: absolute;
+      width: 1080px;
+      height: 60px;
+      margin-top: 165%;
+      margin-left: 12%;
+      background-color:#FFE3E1;
+      padding-left: 27%;
+      padding-top: 5px;
+
+   
+    }
+    #contact img{
+      width: 1000px;
+      height: 600px;
+      background-repeat: no-repeat;
+      position: absolute;
+      margin-top: 5%;
+      margin-left: -80px;
+    }
+
+    #contact-box{
+      width: 500px;
+      height: 500px;
+      background-color: white;
+      margin-left: -400px;
+      margin-top: 80px;
+      box-shadow: 10px 10px 8px #888888;
+    }
+
+    #contact-box button{
+      background-color: black;
+      color: #fff;
+      border-radius: 40px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    #cont-inp{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 450px;
+      height: 40px;
+      padding-top: 10px;
+      margin-left: 10px;
+      color: #73777B;   
+    }
+
+    #cont-msg{
+      width: 450px;
+      height: 200px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    #cont-lower{
+      display: flex;
+      margin-top: 150px;
+      margin-left: -320px;
+
+    }
+
+    #cont-lower img{
+      width: 250px;
+      height: 20px;
+    }
+
+    #cont-lower-a{
+      margin-left: 25px;
+      padding-left: 80px;
+
+    }
+
+    #cont-lower-b{
+      margin-left: 25px;
+      padding-left: 80px;
+    }
+    #cont-lower-c{
+      margin-left: 25px;
+      padding-left: 80px;
+    }
+    #cont-lower-d{
+      margin-left: 25px;
+      padding-left: 80px;
+    }
+
+    #cont-lower-d img{
+      width: 190px;
+      height: 20px;
+      margin-left: 16px;
+      margin-top: 15px;
+    }
+    #line{
+      position: relative;
+      margin-top: 10%;
+      color: black;
+      margin-left: -290px;
+    }
+
+    footer{
+      margin-top: -200px;
+    }
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<!-- Header Section -->
+     <header id="head">
+      <nav id="topnav">
+      	<a><span id="h1">Flower</span><span id="h2">&#9632;</span></a>
+      	<span id="head-center">
+        <a href="#back-img">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#cust-back">Review</a>
+        <a href="#contact">Contact</a>
+        </span>
+        <span id="h3">
+        <a>🖤</a>
+        <a>🛒</a>
+        <a>👤</a>
+        </span>
+</nav>
+
+     </header>
+
+
+     <!-- Background Image Section -->
+     <section id="back-img">
+     	<img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/home-bg.jpg">
+     	<div id="back-img-cont">
+     	<span id="back-img-h1">Fresh Flowers</span>
+     	<br>
+     	<span id="back-img-h2">Natural & Beautiful Flowers</span>
+     	<p>It is a long established fact that a reader will be<br> distracted
+     	   by the readable content of a page<br> when looking at its layout. 
+     	   The point of using
+        </p>
+        <button>Shop Now</button>
+        </div>
+     	
+
+     </section>
+     
+    <!-- About Us Section -->
+    <section id="about">
+      <div id="about-box">
+    	<h1><span id="about-h1">About</span> <span>Us</span></h1>
+       </div>
+      <div class="video-container">
+            <video src="file:///C:/Users/LENOVO/Downloads/Set-a/images/about-vid.mp4" loop autoplay muted></video>
+            <h3 class="overlay">best flower sellers</h3>
+        </div>
+        <span id="about-cont">
+        <h2>Why Choose Us?</h2>
+        <p>It Is Very Important For The Customer To Pay Attention To The Adipiscing Process.<br>
+           No Matter What The Case, No One Who Has A Clear View Of The Body Is Spurned By<br>
+           Any Repudiation.<br><br>
+           Thank You Very Much. It Is The Advantage Of The Accusers That The Incident Is Of<br>
+           Great Importance, That You Can See The Troubles, And Therefore Guide Them To<br>
+           Divorce.</p>
+           <button>Learn More</button>
+
+        </span>
+    	<div id="about-lower">
+           
+           <div id="container">
+           <div id="a1">
+            <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/icon-1.png">
+            <p id="heading">Free Delivery</p>
+            <p id="msg">On All Orders</p>
+         </div>
+
+         
+            <div id="a2">
+            <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/icon-2.png">
+            <p id="heading">10 Days Returns</p>
+            <p id="msg">Moneyback Guarantee</p>
+         </div>
+
+           <div id="a3">
+            <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/icon-3.png">
+            <p id="heading">Offer & Gifts</p>
+            <p id="msg">On All Orders</p>
+           </div>
+
+           <div id="a4">
+            <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/icon-4.png">
+            <p id="heading">Secure Payments</p>
+            <p id="msg">Protected By Paypal</p>
+            </div>
+            </div>
+
+         </div>
+     
+
+    </section>
+
+    <!-- Latest Products Section -->
+    <section id="products">
+      <h1><span id="about-h1">Latest</span> <span>Products</span></h1>
+      <div id="pro-box">
+       <div id="pro-a"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-1.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       <div id="pro-b"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-2.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       <div id="pro-c"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-3.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+
+       <div id="pro-d"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-4.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div> 
+      </div></p>
+      <br>
+      <br>
+      
+      <div id="pro-box">
+       <div id="pro-a"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-5.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       <div id="pro-b"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-6.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       <div id="pro-c"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-7.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       <div id="pro-d"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-8.jpg">
+           <p id="pro-head">Flower Pot</p>
+           <p id="pro-cont">&#8377;12.99</p>
+           <p id="pro-low">&#8377;<s>15.99</s></p>
+        </div>
+       </div>
+       <div id="pro-e"><img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/img-9.jpg">
+           <p id="pro-head1">Flower Pot</p>
+           <p id="pro-cont1">&#8377;12.99</p>
+           <p id="pro-low1">&#8377;<s>15.99</s></p>
+       </div>
+
+       <!-- Customer's Review Section -->
+       <div id="cust-back">
+       <h1><span id="about-h1">Customer's</span> <span>Review</span></h1>
+      </div>
+
+      <div id="cust-disp">
+      <div id="cust-a">
+         <p id="cust-star">⭐⭐⭐⭐⭐</p>
+         <p id="cust-cont">The Company Itself Is A Very Successful Company.
+            Are The Corrupt More Severe Than The Laborious
+            Elders Of The Present? To Repulse The Pleasures
+            Of Repudiating Others, We Accuse Him Of Hating
+            Them, For They Do Not Know Some Of Them And
+            Do Not Deserve Them.
+           </p>
+           <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/pic-1.png">
+           <p id="cust-name">David</p>
+           <p id="cust-desc">Happy Customer</p>
+      
+       </div>
+        <div id="cust-b">
+         <p id="cust-star">⭐⭐⭐⭐⭐</p>
+         <p id="cust-cont">The Company Itself Is A Very Successful Company.
+            Are The Corrupt More Severe Than The Laborious
+            Elders Of The Present? To Repulse The Pleasures
+            Of Repudiating Others, We Accuse Him Of Hating
+            Them, For They Do Not Know Some Of Them And
+            Do Not Deserve Them.
+           </p>
+           <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/pic-2.png">
+           <p id="cust-name">Happy Kaur</p>
+           <p id="cust-desc">Happy Customer</p>
+       </div>
+
+        <div id="cust-c">
+          <p id="cust-star">⭐⭐⭐⭐⭐</p> 
+          <p id="cust-cont">The Company Itself Is A Very Successful Company.
+             Are The Corrupt More Severe Than The Laborious
+             Elders Of The Present? To Repulse The Pleasures
+             Of Repudiating Others, We Accuse Him Of Hating
+             Them, For They Do Not Know Some Of Them And
+              Do Not Deserve Them.
+           </p>
+           <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/pic-3.png">
+           <p id="cust-name">John</p>
+           <p id="cust-desc">Happy Customer</p>
+       </div>
+       <div>
+      
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+      <h1><span id="about-h1">Contact</span> <span>Us</span></h1>
+      <img src="file:///C:/Users/LENOVO/Downloads/flower%20shop%20website/images/contact-img.svg">
+      <div id="contact-box">
+         <form>
+            <input id="cont-inp" type="name" name="name" placeholder="name"><br>
+            <input id="cont-inp" type="email" name="email" placeholder="email"><br>
+            <input id="cont-inp" type="number" name="number" placeholder="number"><br>
+            <input id="cont-msg" type="message" name="message" placeholder="message"><br>
+            <button>Send Message</button>
+         </form>
+      </div>
+
+      <div id="cont-lower">
+         <div id="cont-lower-a">
+            <p>Quick Links</p>
+               <li>Home</li>
+               <li>About</li>
+               <li>Products</li>
+               <li>Review</li>
+               <li>Contact</li>
+         </div>
+
+         <div id="cont-lower-b">
+            <p>Extra Links</p>
+               <li>My Account</li>
+               <li>My Order</li>
+               <li>My Favourite</li>
+         </div>
+
+         <div id="cont-lower-c">
+            <p>Locations</p>
+               <li>India</li>
+               <li>USA</li>
+               <li>Japan</li>
+               <li>France</li>
+         </div>
+
+         <div id="cont-lower-d">
+            <p>Contact Info</p>
+               <li>+011-488-7770</li>
+               <li>Flower_shop@gmail.com</li>
+               <li>Raipur,India - 492001</li>
+               <img src="file:///C:/Users/LENOVO/Downloads/Set-a/images/payment.png">
+             
+         </div>
+      </div>
+      <hr id="line" style="height:200px;border-width: 3px;color:black;">
+      <footer>
+         Created By <span id="about-h1" style="font-family: Roboto;">CA501 PI</span> | All Rights Reserved
+      </footer>
+       
+    </section>
+
+
+
+
+
+</body>
+</html>
